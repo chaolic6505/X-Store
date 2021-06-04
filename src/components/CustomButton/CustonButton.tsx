@@ -5,10 +5,12 @@ interface IButton {
 	type: 'submit';
 }
 
-const CustomButton: React.FC<IButton> = ({ children, ...otherProps }) => (
-	<button className="custom-button" {...otherProps}>
-		{children}
-	</button>
-);
+const CustomButton: React.FC<IButton> = ({ children, ...otherProps }) => {
+	return (
+		<button className="custom-button" {...otherProps}>
+			{children}
+		</button>
+	);
+};
 
 export default CustomButton;

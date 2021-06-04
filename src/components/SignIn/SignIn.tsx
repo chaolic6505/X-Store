@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './SignIn.scss';
 import FormInput from '../FormInput/FormInput';
 import CustomButton from '../CustomButton/CustonButton';
 
-const handleSubmit = (e: React.FormEvent) => {
-	e.preventDefault();
-};
-
-const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-	const { value, name } = e.target;
-};
-
 const SignIn = () => {
-	const [Email, setEmail] = useState('');
-	const [Password, setPassword] = useState('');
+	const [inputValues, setInputValues] = useState({
+		email: '',
+		password: '',
+	});
+
+	const handleChange = useCallback(
+		(e: React.ChangeEvent<HTMLInputElement>) => {
+			const { name, value } = e.target;
+			setInputValues({ ...inputValues, [name]: value });
+		},
+		[inputValues],
+	);
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+	};
+
 	return (
 		<div className="sign-in">
 			<h2>I already have an account</h2>
@@ -24,14 +30,14 @@ const SignIn = () => {
 					name="email"
 					type="email"
 					handleChange={handleChange}
-					value={Email}
+					value={inputValues.email}
 					label="email"
 					required
 				/>
 				<FormInput
 					name="password"
 					type="password"
-					value={Password}
+					value={inputValues.password}
 					handleChange={handleChange}
 					label="password"
 					required

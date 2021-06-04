@@ -1,4 +1,11 @@
-export const Sections = [
+export interface ISection {
+	title: string;
+	imageUrl: string;
+	linkUrl: string;
+	id?: number;
+	size?: string;
+}
+export const Sections: ISection[] = [
 	{
 		title: 'hats',
 		imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',

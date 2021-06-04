@@ -1,15 +1,10 @@
 import React from 'react';
+import { ISection } from '../Directory/DirectoryData';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-
 import './menuitem.scss';
-interface IM extends RouteComponentProps<any> {
-	title: string;
-	key: number;
-	imageUrl: string;
-	linkUrl: string;
-	size?: string;
+export interface IM extends ISection, RouteComponentProps<string> {
+	key: number | undefined;
 }
-
 const SUBTITLE = 'SHOP NOW';
 const MenuItem: React.FC<IM> = ({
 	title,

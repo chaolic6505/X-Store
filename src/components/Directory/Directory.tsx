@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Sections } from './Data';
+import { Sections } from './DirectoryData';
 import MenuItem from '../MenuItems/MenuItem';
 import './directory.scss';
 

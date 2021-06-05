@@ -22,11 +22,18 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      
      
   
       .option {
         padding: 10px 15px;
         text-decoration:none;
+      }
+      .option:hover {
+        color: #b5fed9;
+        font-weight: 900;
+        transition: 0.3s ease-in-out;
+        text-decoration: none;
       }
     }
   }

@@ -7,9 +7,11 @@ import Header from './components/Header/Header';
 import SignInAndSignUp from './pages/SignInSignUp/SignInSignUp';
 
 function App() {
+	
+	
 	return (
 		<div>
-			<Header />
+			<Header/>
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/shop" component={Shop} />

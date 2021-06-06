@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import { Actions } from './userAction';
+
 interface IState {
 	currentUser: firebase.User | null;
 }
@@ -5,11 +8,11 @@ interface IState {
 const INITIAL_STATE: IState = {
 	currentUser: null,
 };
-const Actions = {
-	SET_CURRENT_USER: 'SET_CURRENT_USER',
-};
 
-export const userReducer = (state = INITIAL_STATE, action) => {
+const userReducer = (
+	state = INITIAL_STATE,
+	action: { type: string; payload: string },
+) => {
 	switch (action.type) {
 		case Actions.SET_CURRENT_USER:
 			return {
@@ -20,3 +23,4 @@ export const userReducer = (state = INITIAL_STATE, action) => {
 			return state;
 	}
 };
+export default userReducer;

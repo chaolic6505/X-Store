@@ -1,6 +1,9 @@
+import Logo from '../../assets/logo.png';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/logo.png';
+import { connect } from 'react-redux';
+import CartIcon from '../CartIcon/CartIcon';
+import CartDropDown from '../CartDropDown/CartDropDown';
 import { AuthContext } from '../../context/AuthContex';
 import { auth } from '../../firebase/firebase.util';
 import './header.scss';
@@ -28,7 +31,9 @@ const Header: React.FC = () => {
 						<p>SIGN IN</p>
 					</Link>
 				)}
+				<CartIcon />
 			</div>
+			<CartDropDown />
 		</div>
 	);
 };

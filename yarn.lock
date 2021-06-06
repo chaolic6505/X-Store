@@ -2219,7 +2219,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.0":
+"@types/react@*", "@types/react@^17.0.9":
   "integrity" "sha512-2Cw7FvevpJxQrCb+k5t6GH1KIvmadj5uBbjPaLlJB/nZWUj56e1ZqcD6zsoMFB47MsJUTFl9RJ132A7hb3QFJA=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-17.0.9.tgz"
   "version" "17.0.9"
@@ -2227,6 +2227,13 @@
     "@types/prop-types" "*"
     "@types/scheduler" "*"
     "csstype" "^3.0.2"
+
+"@types/redux-logger@^3.0.8":
+  "integrity" "sha512-zM+cxiSw6nZtRbxpVp9SE3x/X77Z7e7YAfHD1NkxJyJbAGSXJGF0E9aqajZfPOa/sTYnuwutmlCldveExuCeLw=="
+  "resolved" "https://registry.npmjs.org/@types/redux-logger/-/redux-logger-3.0.8.tgz"
+  "version" "3.0.8"
+  dependencies:
+    "redux" "^4.0.0"
 
 "@types/resolve@0.0.8":
   "integrity" "sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ=="

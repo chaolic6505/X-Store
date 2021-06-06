@@ -20,9 +20,7 @@ const SignIn = () => {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-
 		const { email, password } = inputValues;
-
 		try {
 			await auth.signInWithEmailAndPassword(email, password);
 			setInputValues({ email: '', password: '' });

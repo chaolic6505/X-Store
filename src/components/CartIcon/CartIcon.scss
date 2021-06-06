@@ -6,7 +6,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  
+
+    &:hover {
+      color: #b5fed9;
+    }
     .shopping-icon {
       width: 24px;
       height: 24px;

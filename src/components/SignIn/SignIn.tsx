@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import './SignIn.scss';
 import FormInput from '../FormInput/FormInput';
-import CustomButton from '../CustomButton/CustonButton';
+import CustomButton from '../CustomButton/CustomButton';
 import { signInWithGoogle, auth } from '../../firebase/firebase.util';
 
 const SignIn = () => {

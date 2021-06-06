@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import CartIcon from '../CartIcon/CartIcon';
 import CartDropDown from '../CartDropDown/CartDropDown';
-
+import { selectCartHidden } from '../../redux/cart/CartSelectors';
 import { AuthContext } from '../../context/AuthContex';
 import { auth } from '../../firebase/firebase.util';
-import './header.scss';
+import './Header.scss';
 interface IHeader {
 	hidden: boolean;
 }
@@ -41,8 +41,8 @@ const Header: React.FC<IHeader> = ({ hidden }) => {
 	);
 };
 
-const mapStateToProps = ({ cart: { hidden } }) => ({
-	hidden,
+const mapStateToProps = (state) => ({
+	hidden: selectCartHidden(state),
 });
 
 export default connect(mapStateToProps)(Header);

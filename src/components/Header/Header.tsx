@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import CartIcon from '../CartIcon/CartIcon';
 import CartDropDown from '../CartDropDown/CartDropDown';
+
 import { AuthContext } from '../../context/AuthContex';
 import { auth } from '../../firebase/firebase.util';
 import './header.scss';
-
-const Header: React.FC = () => {
+interface IHeader {
+	hidden: boolean;
+}
+const Header: React.FC<IHeader> = ({ hidden }) => {
 	const user = useContext(AuthContext);
 	return (
 		<div className="header">
@@ -33,9 +36,13 @@ const Header: React.FC = () => {
 				)}
 				<CartIcon />
 			</div>
-			<CartDropDown />
+			{hidden ? null : <CartDropDown />}
 		</div>
 	);
 };
 
-export default Header;
+const mapStateToProps = ({ cart: { hidden } }) => ({
+	hidden,
+});
+
+export default connect(mapStateToProps)(Header);

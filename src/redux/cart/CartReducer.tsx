@@ -1,7 +1,7 @@
 import CartActionTypes from './CartTypes';
 import { addItemToCart } from './Cart.utils';
 
-interface IState {
+export interface IState {
 	hidden: true;
 	cartItems: [{ id: string; quantity: number }];
 }

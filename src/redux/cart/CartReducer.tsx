@@ -3,11 +3,11 @@ import { addItemToCart } from './Cart.utils';
 
 export interface IState {
 	hidden: true;
-	cartItems: [{ id: string; quantity: number }];
+	cartItems: [{ id: string; quantity: number }?];
 }
 const INITIAL_STATE: IState = {
 	hidden: true,
-	cartItems: [{ id: '', quantity: 0 }],
+	cartItems: [],
 };
 
 const cartReducer = (

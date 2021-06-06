@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import {
 	clearItemFromCart,
 	addItem,
@@ -33,6 +34,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
 			<div className="remove-button" onClick={() => clearItem(cartItem)}>
 				{SYMBOLS.REMOVE}
 			</div>
+			
 		</div>
 	);
 };

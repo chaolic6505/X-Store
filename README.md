@@ -1,8 +1,4 @@
-
-
 <h1 align="center">X - Store</h3>
-
-
 
 ---
 
@@ -10,23 +6,13 @@
     <br> 
 </p>
 
-<!-- ## 📝 Table of Contents
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [TO-DOs](#todo)
-- [Built Using](#built_using)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement) -->
-
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
-  
 
-### Prerequisites
+
 This is the complete list of dependencies to run this program
 
-You will need to run ```npm install  `` to install them.
+You will need to run `npm install ` to install them.
 
 ```
     "@babel/preset-typescript": "^7.13.0",
@@ -35,47 +21,48 @@ You will need to run ```npm install  `` to install them.
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.23",
     "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.16",
     "@types/react-router-dom": "^5.1.7",
+    "@types/redux-persist": "^4.3.1",
     "firebase": "^8.6.5",
     "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-stripe-checkout": "^2.6.3",
+    "redux": "^4.1.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "reselect": "^4.0.0",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
 ```
 
+## 🎈 Usage <a name="usage"></a>
 
 
-<!-- ## 🎈 Usage <a name="usage"></a>
-A .env folder will need to have the following keys: 
-* AWS client key and client secret from aws
-* S3 bucket name 
-* Last.fm API key 
+- Your  Firebase  config in the firebase.util.tsx file
+- Your Stripe API key in the StripeButton.tsx file
+
 
 ## 🚀 Start The Program <a name = "deployment"></a>
+
 To start the program you will need to go to the program directory and open up your terminal and
-1.  Type ```pip3 install``` and Enter to download all the dependencies
-2.  Type ```source venv/bin/activate``` to get into the virtual environemnt
-3.  Type ``` python3 server.py``` to start the program -->
 
-<!-- ## ⛏️ Built Using <a name = "built_using"></a>
-- [Typescript](https://www.sqlalchemy.org/) - ORM
-- [React](https://www.sqlite.org/index.html) - Database
-- [Firebase](https://flask.palletsprojects.com/en/1.1.x/) - Server Framework
-- [Redux](https://jinja.palletsprojects.com/en/2.11.x/) - Templating
-- [Stripe](https://www.python.org/) - Server Environment -->
-<!-- 
-## TO-DOs <a name = "todo"></a>
+1. Type `npm install` and Enter to download all the dependencies
+2. Type ` npm start` to start the program -->
 
-There are still some functionalities we are working on
-- Music player is not fully function, ie. users are not able to skip songs
-- Users are not able to create a sub-playlist
-- User authentication -->
+## ⛏️ Built Using <a name = "built_using"></a>
 
-
+- Typescript
+- React
+- SCSS
+- Firebase
+- Redux
+- Stripe
 
 
